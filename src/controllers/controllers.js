@@ -3,17 +3,17 @@ import { querys } from '../database/querys.js'
 
 export const controller= {
 
-    Locales_sync:   async (req,res)=>
+    Locales_HD_SPACE:   async (req,res)=>
                     {
                         try {
                             const pool = await getConettion_empresas()
                             const result=await pool
                              .request()
-                             .query(querys.Locales_not_sync)
+                             .query(querys.Locales_HD_SPACE)
                              res.json({
                                  info:{
                                       status:200,
-                                       url:"/synclocales"},
+                                       url:"/HD_SPACE"},
                                        data:result.recordset})
                             
                             } catch (error) {

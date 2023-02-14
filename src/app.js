@@ -2,14 +2,14 @@ import express from "express";
 import config from './config.js'
 const app =express();
 import cors from 'cors'
-import Sync_routes from './routes/Sync_routes.js'
+import SPACE_routes from './routes/HD_SPACE_routes.js'
 
 //setings
 app.set('port', config.port )
 
 app.use(cors())
 
-app.use(Sync_routes)
+app.use(SPACE_routes)
 
 
 
