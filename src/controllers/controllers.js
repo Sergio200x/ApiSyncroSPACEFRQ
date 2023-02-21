@@ -56,6 +56,24 @@ export const controller= {
                             console.log(error)
                             }
                       
+                    },
+    Versiones:   async (req,res)=>
+                    {
+                        try {
+                            const pool = await getConettion_empresas()
+                            const result=await pool
+                             .request()
+                             .query(querys.Versiones)
+                             res.json({
+                                 info:{
+                                      status:200,
+                                       url:"/versiones"},
+                                       data:result.recordset})
+                            
+                            } catch (error) {
+                            console.log(error)
+                            }
+                      
                     }
 
 
@@ -63,4 +81,4 @@ export const controller= {
 }
 
 
-/**HOLALALALALAL*/
+/**H*/
